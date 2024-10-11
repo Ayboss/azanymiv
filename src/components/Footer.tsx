@@ -5,12 +5,13 @@ import instagram from "../../public/img/instagram.svg";
 import linkedin from "../../public/img/linkedln.svg";
 import facebook from "../../public/img/facebook.svg";
 import twitter from "../../public/img/twitter.svg";
+import send from "../../public/img/send.svg";
 import Image from "next/image";
 function Footer() {
   return (
     <footer>
-      <div className="bg-[#102A5BFA] text-white flex items-start gap-[30px] px-[72px] py-[100px]">
-        <div className="w-[412px]">
+      <div className="bg-[#102A5BFA] text-white flex items-start gap-[30px] px-[72px] py-[100px] slg:flex-col slg:gap-20 smd:px-5">
+        <div className="w-[412px] smd:w-full">
           <Image src={logo} alt="logo" width={140} height={40} />
           <p className="text-[14px] font-light my-[14px]">
             We have compared and reviewed the best money transfer websites and
@@ -52,6 +53,7 @@ function Footer() {
               <Link
                 href={""}
                 className="font-light text-[14px] underline text-underline-offset-1"
+                style={{ textUnderlineOffset: "3px" }}
               >
                 Privacy Policy
               </Link>
@@ -64,13 +66,15 @@ function Footer() {
             Don’t miss to subscribe to our new feeds, kindly fill the form
             below.
           </p>
-          <div className="bg-white rounded-full overflow-hidden flex w-[415px]">
+          <div className=" rounded-full overflow-hidden flex w-[415px] sxl:w-full ">
             <input
               type="text"
               placeholder="Email Address"
               className="py-[15px] px-[28px] flex-1"
             />
-            <button className="w-[60px] border-none bg-primary">ds</button>
+            <button className="w-[60px] border-none bg-primary grid place-content-center">
+              <Image src={send} alt="send" />
+            </button>
           </div>
         </div>
       </div>

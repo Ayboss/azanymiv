@@ -17,7 +17,7 @@ function Card({
   text: string;
 }) {
   return (
-    <div className="rounded-[10px] overflow-hidden shadow-blogcard flex-1 max-w-[400px] min-w-[330px] flex flex-col">
+    <div className="rounded-[10px] overflow-hidden shadow-blogcard flex-1 max-w-[400px] min-w-[330px] flex flex-col sm:min-w-full">
       <Image src={image} alt="blog" className="h-[266px] w-full object-cover" />
       <div className="p-4 flex flex-col flex-1">
         <h3 className="text-[24px] leading-[31px] font-extralight mb-4">
@@ -41,31 +41,33 @@ function page() {
   return (
     <main>
       <Nav active="blog" />
-      <h2 className="text-center text-primary tracking-[2px] font-bold mb-5 mt-[63px]">
-        BLOG POSTS
-      </h2>
-      <h3 className="text-center font-semibold text-secondary text-[40px] mb-[63px]">
-        Read Our Recent Blog Posts
-      </h3>
-      <div className="flex gap-12 justify-center px-[60px] flex-wrap mb-[120px]">
-        <Card
-          title="How My Island Visa Simplifies Global Money Transfers"
-          text="International money transfers can often be a complicated and time-consuming process, but My Island Visa is changing the game...."
-          image={blog1}
-        />
+      <section className="px-5">
+        <h2 className="text-center text-primary tracking-[2px] font-bold mb-5 mt-[63px]">
+          BLOG POSTS
+        </h2>
+        <h3 className="text-center font-semibold text-secondary text-[40px] mb-[63px]">
+          Read Our Recent Blog Posts
+        </h3>
+        <div className="flex gap-12 justify-center px-[60px] flex-wrap mb-[120px] md:px-0">
+          <Card
+            title="How My Island Visa Simplifies Global Money Transfers"
+            text="International money transfers can often be a complicated and time-consuming process, but My Island Visa is changing the game...."
+            image={blog1}
+          />
 
-        <Card
-          title="Top 5 Tips for Safe and Secure International Money Transfers..."
-          text="When sending money across borders, security is a top concern..."
-          image={blog2}
-        />
+          <Card
+            title="Top 5 Tips for Safe and Secure International Money Transfers..."
+            text="When sending money across borders, security is a top concern..."
+            image={blog2}
+          />
 
-        <Card
-          title="The Benefits of Mobile Money Transfers with My Island Visa..."
-          text="As the world becomes more connected, mobile money is revolutionizing the way people manage and transfer funds."
-          image={blog3}
-        />
-      </div>
+          <Card
+            title="The Benefits of Mobile Money Transfers with My Island Visa..."
+            text="As the world becomes more connected, mobile money is revolutionizing the way people manage and transfer funds."
+            image={blog3}
+          />
+        </div>
+      </section>
       <Footer />
     </main>
   );

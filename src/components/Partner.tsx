@@ -2,11 +2,16 @@ import React from "react";
 import Button from "./Button";
 import Image from "next/image";
 import miv from "../../public/img/miv.png";
+import PlayBtn from "./PlayBtn";
 
 function Partner() {
   return (
-    <section className="flex gap-[75px] items-center justify-center px-[72px] py-4">
-      <Image src={miv} alt="miv" className="w-[572px] flex-shrink-0" />
+    <section className="flex gap-[75px] items-center justify-center px-[72px] py-4 sxl:gap-[10px] lg:flex-col smd:px-5">
+      <Image
+        src={miv}
+        alt="miv"
+        className="w-[572px] flex-shrink-0  sxl:flex-shrink sxl:max-w-[572px] smd:w-full"
+      />
       <div className="max-w-[660px]">
         <h3 className="text-primary font-bold mb-[18px] tracking-[2px]">
           WHY CHOOSE US
@@ -24,8 +29,9 @@ function Partner() {
           Rely on our 24/7 customer support team to assist you whenever you need
           help, guaranteeing an exceptional experience.
         </p>
-        <div>
+        <div className="flex items-center gap-[37px] ">
           <Button text="Get Started" />
+          <PlayBtn />
         </div>
       </div>
     </section>

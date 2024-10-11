@@ -3,13 +3,14 @@ import React from "react";
 import Button from "./Button";
 import RateCalculator from "./RateCalculator";
 import Nav from "./Nav";
-import Image from "next/image";
-import play from "../../public/img/play.svg";
+
+import PlayBtn from "./PlayBtn";
+
 function Header() {
   return (
     <header className="bg-landingbg bg-cover pb-[150px]">
       <Nav active="home" />
-      <div className="flex gap-2 px-[74px] items-center justify-between mt-[63px] ">
+      <div className="flex gap-2 px-[74px] items-center justify-between mt-[63px] lg:flex-col lg:gap-20 smd:px-5 ">
         <div className="max-w-[665px]">
           <h2 className="text-[55px] font-extrabold leading-[71px] max-w-[464px]">
             Effortless Global Money Transfers
@@ -23,9 +24,7 @@ function Header() {
           </p>
           <div className="flex items-center gap-[37px] ">
             <Button text="Join Today" />
-            <button className="bg-[#0115AD] w-[50px] h-[50px] rounded-full grid place-content-center">
-              <Image src={play} alt="plau" />
-            </button>
+            <PlayBtn />
           </div>
         </div>
         <RateCalculator />

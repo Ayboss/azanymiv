@@ -9,7 +9,7 @@ function page() {
     <main>
       <Nav active="about" />
 
-      <section className="flex justify-center gap-2 items-end px-[60px] mt-[63px] mb-[10px]">
+      <section className="flex justify-center gap-2 items-end px-[60px] mt-[63px] mb-[10px] sxl:mb-40 slg:flex-col slg:items-center slg:gap-20 slg:px-5">
         <div className="max-w-[646px] translate-y-8">
           <h1 className="font-semibold text-secondary text-[40px] mb-3">
             About Us
@@ -34,10 +34,18 @@ function page() {
             your spending with convenience and flexibility.
           </p>
         </div>
-        <Image src={about} alt="about" className="w-[528px] h-[500px]" />
+        <Image
+          src={about}
+          alt="about"
+          className="w-[528px] h-[500px] sxl:w-[400px] sxl:h-auto"
+        />
       </section>
-      <section className="flex justify-center items-end gap-[75px] mb-[72px]">
-        <Image src={miv} alt="miv" className="w-[572px] flex-shrink-0" />
+      <section className="flex justify-center items-end gap-[75px] mb-[72px] sxl:px-5 slg:flex-col slg:items-center slg:gap-20">
+        <Image
+          src={miv}
+          alt="miv"
+          className="w-[572px] flex-shrink-0 sxl:w-[400px]"
+        />
         <div className="max-w-[636px]">
           <h2 className="font-semibold text-secondary text-[30px] mb-3">
             Our Commitment to the Caribbean

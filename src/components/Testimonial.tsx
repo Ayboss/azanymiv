@@ -25,7 +25,7 @@ function Card({
     <div
       className={`pl-[30px] ${
         small ? "pt-[40px]" : "pt-[45px]"
-      } pr-[40px] pb-[30px] rounded-[10px] shadow-testimonial w-[412px]`}
+      } pr-[40px] pb-[30px] rounded-[10px] shadow-testimonial flex-1 max-w-[412px] min-w-[300px]`}
     >
       <p
         className={` ${
@@ -51,8 +51,12 @@ function Card({
 function Testimonial() {
   return (
     <>
-      <section className="flex items-center p-[60px] justify-center">
-        <Image src={mivphone} alt="miv phone" className="w-[636px] h-[855px]" />
+      <section className="flex items-center p-[60px] justify-center slg:flex-col smd:px-5">
+        <Image
+          src={mivphone}
+          alt="miv phone"
+          className="w-[636px] h-[855px] lg:w-auto lg:h-auto smd:w-full"
+        />
         <div className="p-3">
           <h3 className="text-primary font-bold mb-[18px] tracking-[2px]">
             HOW IT WORKS
@@ -82,8 +86,8 @@ function Testimonial() {
               </li>
             </ol>
           </div>
-          <div className="flex gap-7">
-            <div>
+          <div className="flex gap-7 flex-wrap">
+            <div className="min-w-[195px] flex-1">
               <Image src={phone} alt="phone" />
               <h5 className="mb-[18px] mt-[15px] font-light text-[20px] leadding-[26px]">
                 Create Your Account
@@ -93,7 +97,7 @@ function Testimonial() {
                 credentials.
               </p>
             </div>
-            <div>
+            <div className="min-w-[195px] flex-1">
               <Image src={pics} alt="phone" />
               <h5 className="mb-[18px] mt-[15px] font-light text-[20px] leadding-[26px]">
                 Choose Transfer Method
@@ -103,7 +107,7 @@ function Testimonial() {
                 recipient’s details and the amount you wish to send.
               </p>
             </div>
-            <div>
+            <div className="min-w-[195px] flex-1">
               <Image src={rocket} alt="phone" />
               <h5 className="mb-[18px] mt-[15px] font-light text-[20px] leadding-[26px]">
                 Confirm and Pay
@@ -116,14 +120,14 @@ function Testimonial() {
           </div>
         </div>
       </section>
-      <section className="px-[60px] pt-[60px]">
+      <section className="px-[60px] pt-[60px] smd:px-5">
         <h3 className="text-primary font-bold mb-[16px] tracking-[2px] text-center">
           CLIENTS TESTIMONIALS
         </h3>
         <p className="text-secondary font-light text-[40px] mb-[60px] text-center">
           What Our Clients Say
         </p>
-        <div className="flex px-3 pb-[70px] gap-[30px] justify-center items-start">
+        <div className="flex px-3 pb-[70px] gap-[30px] justify-center items-start flex-wrap">
           <Card
             text="As a business owner, I depend on My Island Visa Pro for international
         transactions. The security features and quick bank transfers have saved

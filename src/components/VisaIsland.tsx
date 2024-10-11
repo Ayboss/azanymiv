@@ -17,7 +17,7 @@ function Card({
   text: string;
 }) {
   return (
-    <div className="flex-1 min-w-[350px] py-[40px] px-[15px] bg-white rounded-[10px] flex  items-start gap-3">
+    <div className="flex-1 min-w-[350px] py-[40px] px-[15px] bg-white rounded-[10px] flex  items-start gap-3 smd:min-w-0 smd:w-full">
       <Image src={image} alt="card" className="w-[88px] h-[85px]" />
       <div className="">
         <h5 className="text-primary text-[20px] mb-[10px] tracking-[1px]">
@@ -33,14 +33,14 @@ function Card({
 
 function VisaIsland() {
   return (
-    <div className="p-[60px]  bg-visaisland bg-cover">
+    <div className="p-[60px]  bg-visaisland bg-cover smd:px-5">
       <h3 className="text-primary font-bold mb-[22px] text-center">
         OUR FEATURES
       </h3>
       <h4 className="text-[40px] mb-[59px] text-center font-light text-secondary  ">
         My Island Visa - Security And Efficiency
       </h4>
-      <div className="flex gap-4 items-start flex-wrap">
+      <div className="flex gap-4 items-start flex-wrap smd:flex-nowrap smd:flex-col ">
         <Card
           text="Send money worldwide with incredible speed. Enjoy quick and secure
       international remittances for seamless cross-border transactions."
