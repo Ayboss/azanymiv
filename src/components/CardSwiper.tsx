@@ -32,6 +32,7 @@ function CardSwiper() {
             spaceBetween: 50,
           },
         }}
+        autoplay={true}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
       >
