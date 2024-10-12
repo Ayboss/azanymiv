@@ -19,7 +19,7 @@ export default function Home() {
       <Download />
       <Partner />
       <FinancialConcepts />
-      {/* <CardSwiper /> */}
+      <CardSwiper />
       <Footer />
     </>
   );

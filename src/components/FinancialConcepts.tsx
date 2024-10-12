@@ -54,12 +54,13 @@ function FinancialConcepts() {
               The Financial Industry Regulatory Authority (or FINRA) is a
               non-governmental organization that...
             </p>
+
             <Link
-              className="text-primary font-semibold flex gap-[13px] font-urbanist items-center"
+              className="group text-primary font-semibold flex gap-[13px] font-urbanist items-center transition-all duration-300 hover:gap-[13px]"
               href={"#"}
             >
               Read More
-              <FaArrowRight />
+              <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-2" />
             </Link>
           </div>
 

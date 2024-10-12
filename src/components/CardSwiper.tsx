@@ -1,5 +1,8 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/swiper-bundle.css";
+
 import card1 from "../../public/img/card1.png";
 import card2 from "../../public/img/card2.png";
 import card3 from "../../public/img/card3.png";
@@ -12,8 +15,8 @@ function CardSwiper() {
   return (
     <div className="py-[80px] px-4">
       <Swiper
+        modules={[Autoplay]}
         spaceBetween={50}
-        // slidesPerView={4}
         breakpoints={{
           640: {
             slidesPerView: 2,
@@ -32,7 +35,10 @@ function CardSwiper() {
             spaceBetween: 50,
           },
         }}
-        autoplay={true}
+        autoplay={{
+          delay: 1500, // Adjust delay for autoplay speed (in milliseconds)
+          disableOnInteraction: false, // Continue autoplay even after interaction
+        }}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
       >
