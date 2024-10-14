@@ -19,8 +19,8 @@ function Card({
   image: StaticImageData;
 }) {
   return (
-    <div className="border border-primary rounded-[10px] p-[31px] flex gap-5 items-start flex-1 ">
-      <div className="bg-primary rounded-lg flex justify-center items-center w-[70px] h-[70px]">
+    <div className="border border-primary rounded-[10px] p-[31px] flex gap-5 items-start flex-1 sm:p-5">
+      <div className="bg-primary rounded-lg flex justify-center items-center w-[70px] h-[70px] flex-shrink-0">
         <Image src={image} alt="icon" />
       </div>
       <div>

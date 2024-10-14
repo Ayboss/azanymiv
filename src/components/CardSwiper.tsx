@@ -39,8 +39,8 @@ function CardSwiper() {
           delay: 1500, // Adjust delay for autoplay speed (in milliseconds)
           disableOnInteraction: false, // Continue autoplay even after interaction
         }}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
+        // onSlideChange={() => console.log("slide change")}
+        // onSwiper={(swiper) => console.log(swiper)}
       >
         <SwiperSlide>
           <Image src={card1} alt="card" className="w-full" />

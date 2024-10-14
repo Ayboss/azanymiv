@@ -4,6 +4,7 @@ import phone from "../../public/img/phone.svg";
 import pics from "../../public/img/pics.svg";
 import rocket from "../../public/img/rocket.svg";
 import mivphone from "../../public/img/mivphone.png";
+import slantphone from "../../public/img/slantphone.png";
 import img1 from "../../public/img/img1.png";
 import img2 from "../../public/img/img2.png";
 import img3 from "../../public/img/img3.png";
@@ -51,11 +52,11 @@ function Card({
 function Testimonial() {
   return (
     <>
-      <section className="flex items-center p-[60px] justify-center slg:flex-col smd:px-5">
+      <section className="flex items-center gap-[63px] p-[60px] justify-center slg:flex-col smd:px-5">
         <Image
-          src={mivphone}
+          src={slantphone}
           alt="miv phone"
-          className="w-[636px] h-[855px] lg:w-auto lg:h-auto smd:w-full"
+          className="w-[636px] h-[855px] lg:w-[400px] lg:h-auto smd:w-full"
         />
         <div className="p-3">
           <h3 className="text-primary font-bold mb-[18px] tracking-[2px]">

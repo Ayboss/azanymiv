@@ -71,7 +71,7 @@ function FxRates() {
           <input
             id="country"
             className="w-full border-none flex-1 text-secondary"
-            value={"Ghana"}
+            defaultValue={"Ghana"}
           />
         </div>
       </div>
@@ -82,8 +82,9 @@ function FxRates() {
             className="flex gap-6 flex-wrap 
             "
           >
-            {[...countriesrate].map((data) => (
+            {[...countriesrate].map((data, i) => (
               <Countrycard
+                key={i}
                 image={data.image}
                 rate={data.rate}
                 name={data.name}
@@ -97,8 +98,9 @@ function FxRates() {
             className="flex gap-6 flex-wrap 
             "
           >
-            {[...countriesrate, ...countriesrate].map((data) => (
+            {[...countriesrate, ...countriesrate].map((data, i) => (
               <Countrycard
+                key={i}
                 image={data.image}
                 rate={data.rate}
                 name={data.name}

@@ -1,12 +1,14 @@
-import Link from "next/link";
-import React from "react";
+"use client";
+import React, { useRef } from "react";
 import finra from "../../public/img/finra.png";
 import share from "../../public/img/shares.png";
 import mifid from "../../public/img/mifid.png";
 import banker from "../../public/img/banker.png";
 import Image, { StaticImageData } from "next/image";
 import CardSwiper from "./CardSwiper";
-import { FaArrowRight } from "react-icons/fa";
+import useInView from "@/hooks/useInView";
+import { motion } from "framer-motion";
+import ReadmoreLink from "./ReadmoreLink";
 function Card({
   type,
   heading,
@@ -16,8 +18,17 @@ function Card({
   heading: string;
   image: StaticImageData;
 }) {
+  const ref = useRef<any>(null);
+  const inview = useInView(ref);
+
   return (
-    <div className="flex-1 bg-[#013DAD1F] min-w-[378px] min-h-[234px] md:w-full md:min-w-0 ">
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 30 }}
+      animate={inview ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+      transition={{ duration: 0.5 }}
+      className="flex-1 bg-[#013DAD1F] min-w-[378px] min-h-[234px] md:w-full md:min-w-0 "
+    >
       <div className="pt-[25px] px-[34px] max-w-[378px] min-h-[234px] md:w-full">
         <h3 className="text-primary font-bold tracking-[2px] mb-3 font-urbanist">
           {type}
@@ -27,7 +38,7 @@ function Card({
         </p>
       </div>
       <Image src={image} alt="card" className="w-full object-cover" />
-    </div>
+    </motion.div>
   );
 }
 function FinancialConcepts() {
@@ -55,13 +66,7 @@ function FinancialConcepts() {
               non-governmental organization that...
             </p>
 
-            <Link
-              className="group text-primary font-semibold flex gap-[13px] font-urbanist items-center transition-all duration-300 hover:gap-[13px]"
-              href={"#"}
-            >
-              Read More
-              <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-2" />
-            </Link>
+            <ReadmoreLink />
           </div>
 
           <Image

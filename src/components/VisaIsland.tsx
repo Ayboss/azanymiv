@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+import React, { RefAttributes, useRef } from "react";
+import { motion } from "framer-motion";
 import fast_trans from "../../public/img/fast_transfer.svg";
 import flex_options from "../../public/img/flexible_options.svg";
 import app_integration from "../../public/img/app_intgration.svg";
@@ -6,6 +8,7 @@ import art_security from "../../public/img/art_security.svg";
 import trans_track from "../../public/img/trans_track.svg";
 import cust_support from "../../public/img/cust_support.svg";
 import Image from "next/image";
+import useInView from "@/hooks/useInView";
 
 function Card({
   image,
@@ -16,8 +19,17 @@ function Card({
   heading: string;
   text: string;
 }) {
+  const ref = useRef<any>(null);
+  const inview = useInView(ref);
+
   return (
-    <div className="flex-1 min-w-[350px] py-[40px] px-[15px] bg-white rounded-[10px] flex  items-start gap-3 smd:min-w-0 smd:w-full">
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 30 }}
+      animate={inview ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+      transition={{ duration: 0.5 }}
+      className="flex-1 min-w-[350px] py-[40px] px-[15px] bg-white rounded-[10px] flex  items-start gap-3 smd:min-w-0 smd:w-full"
+    >
       <Image src={image} alt="card" className="w-[88px] h-[85px]" />
       <div className="">
         <h5 className="text-primary text-[20px] mb-[10px] tracking-[1px]">
@@ -27,7 +39,7 @@ function Card({
           {text}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

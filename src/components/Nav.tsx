@@ -4,9 +4,17 @@ import logo from "../../public/img/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
-import { FaBars, FaTimes, FaCaretDown } from "react-icons/fa";
+import {
+  FaBars,
+  FaTimes,
+  FaCaretDown,
+  FaHome,
+  FaAward,
+  FaBook,
+} from "react-icons/fa";
 
 import { Dropdown, Button as RizzButton } from "rizzui";
+import { FaPeopleGroup } from "react-icons/fa6";
 
 function Nav({ active }: { active: string }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -70,69 +78,66 @@ function Nav({ active }: { active: string }) {
       </div>
       {isOpen && (
         <div
-          className={`absolute bg-visaisland  right-0 top-0 w-full h-screen bg-red-50 flex-col items-center justify-center flex transform   z-50`}
-          style={{ transition: "all 0.3s ease-in-out" }}
+          className={`absolute  right-2 top-20  bg-white  z-50 rounded-md w-[250px] p-3`}
         >
-          <button
-            onClick={toggleMenu}
-            aria-label="Toggle Menu"
-            className="absolute top-5 right-5 "
-          >
-            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-          </button>
-          <ul className={`flex gap-3 flex-col mb-10`}>
+          <ul className={`flex gap-7 flex-col `}>
             <li
-              className={` text-[20px] ${
-                active === "home" ? "text-primary" : "text-black"
+              className={`  ${
+                active === "home" ? "text-primary" : "text-secondary"
               } hover:text-primary`}
             >
-              <Link href={"/"} onClick={toggleMenu}>
-                Home
+              <Link
+                href={"/"}
+                onClick={toggleMenu}
+                className="flex items-center gap-2"
+              >
+                <FaHome />
+                <span>Home</span>
               </Link>
             </li>
             <li
-              className={`text-[20px] ${
-                active === "about" ? "text-primary" : "text-black"
+              className={`${
+                active === "about" ? "text-primary" : "text-secondary"
               } hover:text-primary`}
             >
-              <Link href={"/about"} onClick={toggleMenu}>
-                About Us
+              <Link
+                href={"/about"}
+                className="flex items-center gap-2"
+                onClick={toggleMenu}
+              >
+                <FaAward />
+                <span>About Us</span>
               </Link>
             </li>
             <li
-              className={` text-[20px] ${
-                active === "blog" ? "text-primary" : "text-black"
+              className={`  ${
+                active === "blog" ? "text-primary" : "text-secondary"
               } hover:text-primary`}
             >
-              <Link href={"/blog"} onClick={toggleMenu}>
-                Blog
+              <Link
+                href={"/blog"}
+                onClick={toggleMenu}
+                className="flex items-center gap-2"
+              >
+                <FaBook />
+                <span>Blog</span>
               </Link>
             </li>
             <li
-              className={` text-[20px] ${
-                active === "contact" ? "text-primary" : "text-black"
+              className={`  ${
+                active === "contact" ? "text-primary" : "text-secondary"
               } hover:text-primary`}
             >
-              <Link href={"/contact"} onClick={toggleMenu}>
-                Contact
+              <Link
+                href={"/contact"}
+                className="flex items-center gap-2"
+                onClick={toggleMenu}
+              >
+                <FaPeopleGroup />
+                <span>Contact</span>
               </Link>
             </li>
           </ul>
-          <div className="gap-5 flex items-center ">
-            <Dropdown>
-              <Dropdown.Trigger>
-                <RizzButton as="span" variant="outline">
-                  English
-                  <FaCaretDown color="#999999" />
-                </RizzButton>
-              </Dropdown.Trigger>
-              <Dropdown.Menu>
-                <Dropdown.Item>French</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-
-            <Button text="Login" />
-          </div>
         </div>
       )}
     </nav>
