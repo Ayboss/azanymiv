@@ -17,7 +17,7 @@ const config: Config = {
         secondary: "#393939",
       },
       backgroundImage: {
-        landingbg: "url('/img/landingpage.png')",
+        landingbg: "url('/img/landingpage2.png')",
         visaisland: "url('/img/visaisland.png')",
         financeside: "url('/img/financeside.svg')",
       },
