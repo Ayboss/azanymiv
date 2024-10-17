@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import usa from "../../public/img/countries/usa.svg";
 import ngn from "../../public/img/countries/ngn.png";
+import jmd from "../../public/img/countries/jmd.png";
 import {
   Dropdown,
   Button as RizzButton,
@@ -67,7 +68,7 @@ className={"text-white border-none"}
 }
 function RateCalculator() {
   const [value, setValue] = useState("usd");
-  const [value2, setValue2] = useState("ngn");
+  const [value2, setValue2] = useState("jmd");
   const [isOpen, setIsOpen] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -99,7 +100,7 @@ function RateCalculator() {
     <form className="max-w-[526px] w-full rounded-[20px] bg-white flex-shrink-0 p-[25px]">
       <div className="bg-[#0115AD] text-white flex flex-col items-center gap-[15px] font-medium justify-center h-[107px] rounded-[10px] mb-[30px]">
         <p>Exchange Rate</p>
-        <p>1.00 USD = 760.00 NGN</p>
+        <p>1.00 USD = 760.00 JMD</p>
       </div>
       <div className="mb-[30px] relative" ref={dropdownRef}>
         <p className="mb-2">You send exactly</p>
@@ -128,17 +129,21 @@ function RateCalculator() {
               <span
                 className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                 onClick={() => {
-                  setValue("NGN");
+                  setValue("jmd");
                   setIsOpen(false);
                 }}
               >
-                <Image src={ngn} alt={`logo`} className="w-5 h-4 mr-2" />
-                NGN
+                <Image
+                  src={jmd}
+                  alt={`logo`}
+                  className="w-5 h-4 mr-2 object-cover"
+                />
+                JMD
               </span>
               <span
                 className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                 onClick={() => {
-                  setValue("NGN");
+                  setValue("jmd");
                   setIsOpen(false);
                 }}
               >
@@ -180,8 +185,12 @@ function RateCalculator() {
             className="bg-[#0115AD] w-[110px] flex items-center justify-center text-white text-[13px]"
             onClick={toggleDropdown2}
           >
-            <Image src={ngn} alt="country" className="mr-3" />
-            <span>NGN</span>
+            <Image
+              src={jmd}
+              alt="country"
+              className="mr-3 w-[30px] h-[30px] rounded-full"
+            />
+            <span>JMD</span>
             <FaCaretDown />
           </div>
         </div>
@@ -196,12 +205,16 @@ function RateCalculator() {
               <span
                 className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                 onClick={() => {
-                  setValue2("NGN");
+                  setValue2("jmd");
                   setIsOpen2(false);
                 }}
               >
-                <Image src={ngn} alt={`logo`} className="w-5 h-4 mr-2" />
-                NGN
+                <Image
+                  src={jmd}
+                  alt={`logo`}
+                  className="w-5 h-4 object-cover mr-2"
+                />
+                JMD
               </span>
               <span
                 className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
