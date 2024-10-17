@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import logo from "../../public/img/logo.png";
+import logo from "../../public/img/logotransparent.png";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
@@ -25,7 +25,7 @@ function Nav({ active }: { active: string }) {
 
   return (
     <nav className="flex justify-between items-center px-[74px] py-5 smd:px-5">
-      <Image src={logo} alt="logo" width={140} height={41} />
+      <Image src={logo} alt="logo" width={192} height={109} />
       <div className="hidden md:block">
         <button onClick={toggleMenu} aria-label="Toggle Menu">
           {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
