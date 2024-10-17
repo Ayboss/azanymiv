@@ -12,9 +12,9 @@ function Header() {
       <Nav active="home" />
       <div className="max-w-[1434px] m-auto px-[74px] mt-[63px] smd:px-5 ">
         <div className="flex gap-2  items-center justify-between  lg:flex-col lg:gap-20 ">
-          <div className="max-w-[665px]">
-            <h2 className="text-[55px] font-extrabold leading-[71px] max-w-[464px]">
-              Effortless Global Money Transfers
+          <div className="max-w-[685px]">
+            <h2 className="text-[55px] font-extrabold leading-[71px] mb-2">
+              Transfer with Ease: Your Gateway to Global Funds.
             </h2>
             <p className="font-medium leading-8 text-[#393939] mb-5">
               At My Island Visa, we are dedicated to uniting hearts and

@@ -39,7 +39,7 @@ function Card({
           {text}
         </p>
         <Link
-          href={"#"}
+          href={"/blog/123412342141"}
           className="text-[#142E5E] italic font-medium text-[15px] flex gap-[13px] items-center transition-all duration-300 hover:gap-[13px] group"
         >
           Read More

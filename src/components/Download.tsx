@@ -2,6 +2,9 @@ import Image from "next/image";
 import React from "react";
 import phone from "../../public/img/iphone.png";
 import person from "../../public/img/person.png";
+import appledownload from "../../public/img/appdownload.png";
+import googledownload from "../../public/img/googlestore.png";
+import Link from "next/link";
 
 function Download() {
   return (
@@ -15,7 +18,14 @@ function Download() {
           the My Island Visa mobile app. Download now and take control of your
           financial world! Available for both Android and iOS devices.
         </p>
-        <div></div>
+        <div className="flex gap-3 items-center flex-wrap mb-5">
+          <Link href={"#"}>
+            <Image src={appledownload} alt="download" />
+          </Link>
+          <Link href={"#"}>
+            <Image src={googledownload} alt="download" />
+          </Link>
+        </div>
       </div>
       <div className="flex md:flex-col md:gap-10">
         <Image src={phone} alt="phone" />

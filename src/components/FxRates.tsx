@@ -59,7 +59,7 @@ function FxRates() {
   return (
     <section className="bg-primary text-white py-[80px] px-6 smd:px-5">
       <h2 className="mb-[82px] text-center font-light text-[40px]">
-        Monitoring Real-time Foreign Exchange (FX) Rates Worldwide.
+        Stay Ahead Globally: Real-Time Forex Rates at Your Fingertips.
       </h2>
 
       <div className="flex flex-col justify-center items-center gap-6">
