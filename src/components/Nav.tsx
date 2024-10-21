@@ -11,6 +11,7 @@ import {
   FaHome,
   FaAward,
   FaBook,
+  FaRocket,
 } from "react-icons/fa";
 
 import { Dropdown, Button as RizzButton } from "rizzui";
@@ -26,12 +27,12 @@ function Nav({ active }: { active: string }) {
   return (
     <nav className="flex justify-between items-center px-[74px] py-5 smd:px-5">
       <Image src={logo} alt="logo" width={192} height={109} />
-      <div className="hidden md:block">
+      <div className="hidden slg:block">
         <button onClick={toggleMenu} aria-label="Toggle Menu">
           {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
       </div>
-      <ul className="flex gap-5 text-black font-semibold md:hidden">
+      <ul className="flex gap-5 text-black font-semibold slg:hidden">
         <li
           className={`${
             active == "home" ? "text-primary" : "text-black"
@@ -61,7 +62,7 @@ function Nav({ active }: { active: string }) {
           <Link href={"/contact"}>Contact</Link>
         </li>
       </ul>
-      <div className="gap-5 flex items-center  md:hidden">
+      <div className="gap-5 flex items-center  slg:hidden">
         <Dropdown>
           <Dropdown.Trigger>
             <RizzButton as="span" variant="outline">
@@ -74,11 +75,17 @@ function Nav({ active }: { active: string }) {
           </Dropdown.Menu>
         </Dropdown>
 
-        <Button text="Login" />
+        <Button text="Login" href="https://app.myislandvisa.com" link={true} />
+        <Link
+          href="https://app.myislandvisa.com/register"
+          className="border-primary border rounded-full py-[10px] px-[27px] text-primary font-semibold"
+        >
+          Register
+        </Link>
       </div>
       {isOpen && (
         <div
-          className={`absolute  right-2 top-20  bg-white  z-50 rounded-md w-[250px] p-3`}
+          className={`absolute hidden slg:block right-2 top-20  bg-white  z-50 rounded-md w-[250px] p-3`}
         >
           <ul className={`flex gap-7 flex-col `}>
             <li
@@ -135,6 +142,19 @@ function Nav({ active }: { active: string }) {
               >
                 <FaPeopleGroup />
                 <span>Contact</span>
+              </Link>
+            </li>
+            <li
+              className={`  ${
+                active === "login" ? "text-primary" : "text-secondary"
+              } hover:text-primary`}
+            >
+              <Link
+                href="https://app.myislandvisa.com"
+                className="flex items-center gap-2"
+              >
+                <FaRocket />
+                Login
               </Link>
             </li>
           </ul>

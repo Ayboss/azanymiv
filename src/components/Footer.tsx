@@ -21,25 +21,25 @@ function Footer() {
           <p className="font-bold text-[20px] mb-5">Follow us</p>
           <div className="flex gap-[18px] items-center">
             <Link
-              href="#"
+              href="https://www.instagram.com/myislandvisa?igsh=Z3lyY3BobHM5N3J5&utm_source=qr"
               className="w-[40px] h-[40px] bg-primary flex justify-center items-center rounded-full"
             >
               <Image alt="logo" src={instagram} />
             </Link>
             <Link
-              href="#"
+              href="https://www.linkedin.com/company/my-island-visa/"
               className="w-[40px] h-[40px] bg-primary flex justify-center items-center rounded-full"
             >
               <Image alt="logo" src={linkedin} />
             </Link>
             <Link
-              href="#"
+              href="https://www.facebook.com/Myislandvisa?mibextid=LQQJ4d"
               className="w-[40px] h-[40px] bg-primary flex justify-center items-center rounded-full"
             >
               <Image alt="logo" src={facebook} />
             </Link>
             <Link
-              href="#"
+              href="https://x.com/islandvisa?s=11"
               className="w-[40px] h-[40px] bg-primary flex justify-center items-center rounded-full"
             >
               <Image alt="logo" src={twitter} />
